@@ -1,5 +1,5 @@
-import { Properties } from "@/constants/Properties";
-import { LayoutResizing, LayoutResizingTokenBase } from "./LayoutResizingTokenBase";
+import { Properties } from '@/constants/Properties';
+import { LayoutResizing, LayoutResizingTokenBase } from './LayoutResizingTokenBase';
 
 export class HorizontalResizingToken extends LayoutResizingTokenBase {
   public readonly key = Properties.horizontalResizing;

@@ -266,7 +266,7 @@ export const DownshiftInput: React.FunctionComponent<DownShiftProps> = ({
                       data-cy="downshift-input-item"
                       data-testid="downshift-input-item"
                       className="dropdown-item"
-                      {...getItemProps({ key: tokenName, index, item: {...token, name: tokenName} })}
+                      {...getItemProps({ key: tokenName, index, item: { ...token, name: tokenName } })}
                       css={{
                         backgroundColor: highlightedIndex === index ? '$interaction' : '$bgDefault',
                       }}
@@ -280,7 +280,7 @@ export const DownshiftInput: React.FunctionComponent<DownShiftProps> = ({
                       <StyledItemName>{getHighlightedText(tokenName, filteredValue || '')}</StyledItemName>
                       <StyledItemValue>{resolveValue(token)}</StyledItemValue>
                     </StyledItem>
-                  )
+                  );
                 })}
               </StyledDropdown>
             ) : null}

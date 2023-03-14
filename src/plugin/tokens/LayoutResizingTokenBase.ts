@@ -1,16 +1,18 @@
-import { Properties } from "@/constants/Properties";
-import { LayoutAlign } from "../figmaTypes/layoutAlign";
-import { LayoutGrow } from "../figmaTypes/layoutGrow";
-import { LayoutMode } from "../figmaTypes/layoutMode";
-import { getNodeParentLayoutMode } from "../figmaUtils/getNodeParentLayoutMode";
-import { notifyUI } from "../notifiers";
-import { BaseToken } from "./BaseToken";
+import { Properties } from '@/constants/Properties';
+import { LayoutAlign } from '../figmaTypes/layoutAlign';
+import { LayoutGrow } from '../figmaTypes/layoutGrow';
+import { LayoutMode } from '../figmaTypes/layoutMode';
+import { getNodeParentLayoutMode } from '../figmaUtils/getNodeParentLayoutMode';
+import { notifyUI } from '../notifiers';
+import { BaseToken } from './BaseToken';
 
 export type LayoutResizing = 'FIXED' | 'FILL' | 'HUG';
 
 export abstract class LayoutResizingTokenBase extends BaseToken<LayoutResizing> {
   private readonly applyKey = 'layoutGrow';
+
   private readonly allowedValues = ['FIXED', 'FILL', 'HUG'];
+
   private readonly defaultValue = 'FIXED';
 
   public fromTokenValue(value: any) {
@@ -18,7 +20,7 @@ export abstract class LayoutResizingTokenBase extends BaseToken<LayoutResizing> 
     if (this.allowedValues.includes(val)) {
       return val;
     }
-    notifyUI(`Invalid ${this.key} value: ${val}. Must be one of: ${this.allowedValues.join(', ')}. Defaulting to ${this.defaultValue}.`)
+    notifyUI(`Invalid ${this.key} value: ${val}. Must be one of: ${this.allowedValues.join(', ')}. Defaulting to ${this.defaultValue}.`);
     return this.defaultValue;
   }
 

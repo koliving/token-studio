@@ -1,4 +1,4 @@
-import { MapValuesToTokensResult } from "@/types";
+import { MapValuesToTokensResult } from '@/types';
 
 export abstract class BaseToken<TValue> {
   public readonly abstract key: string;

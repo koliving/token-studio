@@ -1,13 +1,16 @@
-import { Properties } from "@/constants/Properties";
-import { notifyUI } from "../notifiers";
-import { BaseToken } from "./BaseToken";
+import { Properties } from '@/constants/Properties';
+import { notifyUI } from '../notifiers';
+import { BaseToken } from './BaseToken';
 
 export type LayoutPositioning = 'AUTO' | 'ABSOLUTE';
 
 export class LayoutPositioningToken extends BaseToken<LayoutPositioning> {
   public readonly key = Properties.layoutPositioning;
+
   private readonly applyKey = 'layoutPositioning';
+
   private readonly allowedValues = ['AUTO', 'ABSOLUTE'];
+
   private readonly defaultValue = 'AUTO';
 
   public fromTokenValue(value: any) {
@@ -15,7 +18,7 @@ export class LayoutPositioningToken extends BaseToken<LayoutPositioning> {
     if (this.allowedValues.includes(val)) {
       return val;
     }
-    notifyUI(`Invalid ${this.key} value: ${val}. Must be one of: ${this.allowedValues.join(', ')}. Defaulting to ${this.defaultValue}.`)
+    notifyUI(`Invalid ${this.key} value: ${val}. Must be one of: ${this.allowedValues.join(', ')}. Defaulting to ${this.defaultValue}.`);
     return this.defaultValue;
   }
 

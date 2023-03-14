@@ -13,7 +13,7 @@ export default async function validateLicense(
         plan: 'pro',
         entitlements: [Entitlements.PRO],
         email: 'dev@dev.com',
-      }
+      };
     }
 
     const res = await fetch(
