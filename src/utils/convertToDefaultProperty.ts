@@ -37,7 +37,7 @@ export function convertToDefaultProperty(property: string): string {
       type = Properties.fontSizes;
       break;
     case 'fontWeight':
-      type = Properties.fontWeights;
+      type = Properties.fontWeight;
       break;
     case 'lineHeights':
       type = Properties.lineHeights;

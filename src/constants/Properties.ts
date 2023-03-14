@@ -39,7 +39,7 @@ export enum Properties {
   boxShadow = 'boxShadow',
   opacity = 'opacity',
   fontFamilies = 'fontFamilies',
-  fontWeights = 'fontWeights',
+  fontWeight = 'fontWeight',
   fontSizes = 'fontSizes',
   lineHeights = 'lineHeights',
   typography = 'typography',

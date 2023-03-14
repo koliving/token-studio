@@ -96,8 +96,8 @@ describe('convertToDefaultProperty', () => {
       output: Properties.fontFamilies,
     },
     {
-      input: Properties.fontWeights,
-      output: Properties.fontWeights,
+      input: Properties.fontWeight,
+      output: Properties.fontWeight,
     },
     {
       input: Properties.fontSizes,
