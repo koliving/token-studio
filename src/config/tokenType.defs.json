@@ -155,6 +155,69 @@
       "value": { "type": "string" }
     }
   },
+  "layoutMode": {
+    "label": "Layout Mode",
+    "property": "Layout Mode",
+    "type": "layoutMode",
+    "suggestions": ["vertical", "horizontal"],
+    "schemas": {
+      "value": { "type": "string" }
+    }
+  },
+  "horizontalResizing": {
+    "label": "Horizontal Resizing",
+    "property": "Horizontal Resizing",
+    "type": "horizontalResizing",
+    "suggestions": ["fixed", "fill", "hug"],
+    "schemas": {
+      "value": { "type": "string" }
+    }
+  },
+  "verticalResizing": {
+    "label": "Vertical Resizing",
+    "property": "Vertical Resizing",
+    "type": "verticalResizing",
+    "suggestions": ["fixed", "fill", "hug"],
+    "schemas": {
+      "value": { "type": "string" }
+    }
+  },
+  "layoutAlignItems": {
+    "label": "Align Items",
+    "property": "Align Items",
+    "type": "layoutAlignItems",
+    "suggestions": [
+      "top left",
+      "top center",
+      "top right",
+      "center left",
+      "center",
+      "center right",
+      "bottom left",
+      "bottom center",
+      "bottom right"
+    ],
+    "schemas": {
+      "value": { "type": "string" }
+    }
+  },
+  "position": {
+    "label": "Position",
+    "property": "Position",
+    "type": "position",
+    "suggestions": ["inherit", "absolute"],
+    "schemas": {
+      "value": { "type": "string" }
+    }
+  },
+  "maxWidth": {
+    "label": "Max Width",
+    "property": "Max Width",
+    "type": "maxWidth",
+    "schemas": {
+      "value": { "type": "string" }
+    }
+  },
   "textCase": {
     "label": "Text Case",
     "property": "TextCase",

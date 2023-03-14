@@ -26,6 +26,12 @@ import { isCompositeBorderValue } from '@/utils/is/isCompositeBorderValue';
 import { setBorderColorValuesOnTarget } from './setBorderColorValuesOnTarget';
 import removeValuesFromNode from './removeValuesFromNode';
 import { Properties } from '@/constants/Properties';
+import layoutModeToken from './tokens/LayoutModeToken';
+import horizontalResizingToken from './tokens/HorizontalResizingToken';
+import verticalResizingToken from './tokens/VerticalResizingToken';
+import layoutPositioningToken from './tokens/LayoutPositioningToken';
+import layoutAlignItemsToken from './tokens/LayoutAlignItemsToken';
+import maxWidthToken from './tokens/MaxWidthToken';
 
 // @README values typing is wrong
 
@@ -46,6 +52,13 @@ export default async function setValuesOnNode(
   const stylePathPrefix = prefixStylesWithThemeName && activeThemeObject ? activeThemeObject.name : null;
 
   try {
+    layoutModeToken.applyFromTokensResult(node, values);
+    horizontalResizingToken.applyFromTokensResult(node, values);
+    verticalResizingToken.applyFromTokensResult(node, values);
+    layoutPositioningToken.applyFromTokensResult(node, values);
+    layoutAlignItemsToken.applyFromTokensResult(node, values);
+    maxWidthToken.applyFromTokensResult(node, values);
+
     // BORDER RADIUS
     if (
       node.type !== 'CONNECTOR'

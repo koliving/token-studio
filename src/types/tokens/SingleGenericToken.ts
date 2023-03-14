@@ -4,6 +4,7 @@ import { ColorModifier } from '../Modifier';
 export type SingleGenericToken<T extends TokenTypes, V = string, Named extends boolean = true, P = unknown> = {
   type: T;
   value: V;
+  isSuggestion?: boolean;
   rawValue?: V;
   description?: string;
   oldDescription?: string;

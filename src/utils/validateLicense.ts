@@ -1,5 +1,6 @@
 import * as Sentry from '@sentry/react';
 import { Entitlements } from '@/app/store/models/userState';
+import { notifyToUI } from '@/plugin/notifiers';
 
 export default async function validateLicense(
   licenseKey: string,
@@ -7,6 +8,14 @@ export default async function validateLicense(
   userName?: string | null,
 ): Promise<{ plan?: string; entitlements?: Entitlements[]; email?: string; error?: string }> {
   try {
+    if (process.env.DEV_PRO_LICENSE) {
+      return {
+        plan: 'pro',
+        entitlements: [Entitlements.PRO],
+        email: 'dev@dev.com',
+      }
+    }
+
     const res = await fetch(
       `${process.env.LICENSE_API_URL}/validate-license?licenseKey=${licenseKey}&userId=${userId}${
         userName ? `&userName=${userName}` : ''

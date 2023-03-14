@@ -1,4 +1,10 @@
 export enum Properties {
+  layoutMode = 'layoutMode',
+  horizontalResizing = 'horizontalResizing',
+  verticalResizing = 'verticalResizing',
+  layoutPositioning = 'layoutPositioning',
+  layoutAlignItems = 'layoutAlignItems',
+  maxWidth = 'maxWidth',
   sizing = 'sizing',
   height = 'height',
   width = 'width',
