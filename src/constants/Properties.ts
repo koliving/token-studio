@@ -5,6 +5,8 @@ export enum Properties {
   layoutPositioning = 'layoutPositioning',
   layoutAlignItems = 'layoutAlignItems',
   maxWidth = 'maxWidth',
+  transformX = 'transformX',
+  transformY = 'transformY',
   sizing = 'sizing',
   height = 'height',
   width = 'width',

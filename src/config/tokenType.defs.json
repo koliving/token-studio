@@ -201,11 +201,11 @@
       "value": { "type": "string" }
     }
   },
-  "position": {
-    "label": "Position",
-    "property": "Position",
-    "type": "position",
-    "suggestions": ["inherit", "absolute"],
+  "layoutPositioning": {
+    "label": "Layout Positioning",
+    "property": "Layout Positioning",
+    "type": "layoutPositioning",
+    "suggestions": ["auto", "absolute"],
     "schemas": {
       "value": { "type": "string" }
     }

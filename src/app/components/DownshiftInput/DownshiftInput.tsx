@@ -163,7 +163,7 @@ export const DownshiftInput: React.FunctionComponent<DownShiftProps> = ({
         ));
     },
     [resolvedTokens, filteredValue, type, isDocumentationType],
-  );
+  ).sort((a, b) => a.isSuggestion ? -1 : 1);
 
   const resolveValue = useCallback((token: SingleToken) => {
     let returnValue: string = '';

@@ -32,6 +32,8 @@ import verticalResizingToken from './tokens/VerticalResizingToken';
 import layoutPositioningToken from './tokens/LayoutPositioningToken';
 import layoutAlignItemsToken from './tokens/LayoutAlignItemsToken';
 import maxWidthToken from './tokens/MaxWidthToken';
+import transformXToken from './tokens/TransformXToken';
+import transformYToken from './tokens/TransformYToken';
 
 // @README values typing is wrong
 
@@ -58,6 +60,8 @@ export default async function setValuesOnNode(
     layoutPositioningToken.applyFromTokensResult(node, values);
     layoutAlignItemsToken.applyFromTokensResult(node, values);
     maxWidthToken.applyFromTokensResult(node, values);
+    transformXToken.applyFromTokensResult(node, values);
+    transformYToken.applyFromTokensResult(node, values);
 
     // BORDER RADIUS
     if (

@@ -4,6 +4,8 @@ import layoutAlignItemsToken from './tokens/LayoutAlignItemsToken';
 import layoutModeToken from './tokens/LayoutModeToken';
 import layoutPositioningToken from './tokens/LayoutPositioningToken';
 import maxWidthToken from './tokens/MaxWidthToken';
+import transformXToken from './tokens/TransformXToken';
+import transformYToken from './tokens/TransformYToken';
 import verticalResizingToken from './tokens/VerticalResizingToken';
 
 export default function removeValuesFromNode(node: BaseNode, prop: Properties) {
@@ -26,6 +28,12 @@ export default function removeValuesFromNode(node: BaseNode, prop: Properties) {
       break;
     case maxWidthToken.key:
       maxWidthToken.unset(node);
+      break;
+    case transformXToken.key:
+      transformXToken.unset(node);
+      break;
+    case transformYToken.key:
+      transformYToken.unset(node);
       break;
     case 'borderRadius':
       if (
