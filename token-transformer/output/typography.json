@@ -8,7 +8,7 @@
     "fontWeight": {
       "value": "Bold",
       "description": "Weight value",
-      "type": "fontWeights"
+      "type": "fontWeight"
     },
     "h1": {
       "value": {

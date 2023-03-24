@@ -7,7 +7,7 @@ import { SingleOpacityToken } from './SingleOpacityToken';
 import { SingleBorderWidthToken } from './SingleBorderWidthToken';
 import { SingleBoxShadowToken } from './SingleBoxShadowToken';
 import { SingleFontFamiliesToken } from './SingleFontFamiliesToken';
-import { SingleFontWeightsToken } from './SingleFontWeightsToken';
+import { SinglefontWeightToken } from './SinglefontWeightToken';
 import { SingleLineHeightsToken } from './SingleLineHeightsToken';
 import { SingleLetterSpacingToken } from './SingleLetterSpacingToken';
 import { SingleFontSizesToken } from './SingleFontSizesToken';
@@ -29,7 +29,7 @@ export type SingleToken<Named extends boolean = true, P = unknown> =
   | SingleBorderWidthToken<Named, P>
   | SingleBoxShadowToken<Named, P>
   | SingleFontFamiliesToken<Named, P>
-  | SingleFontWeightsToken<Named, P>
+  | SinglefontWeightToken<Named, P>
   | SingleLineHeightsToken<Named, P>
   | SingleLetterSpacingToken<Named, P>
   | SingleFontSizesToken<Named, P>

@@ -21,7 +21,7 @@ export default function pullStyles(styleTypes: PullStyleOptions): void {
   let effects: SingleToken[] = [];
   let fontFamilies: SingleToken[] = [];
   let lineHeights: SingleToken[] = [];
-  let fontWeights: SingleToken[] = [];
+  let fontWeight: SingleToken[] = [];
   let fontSizes: SingleToken[] = [];
   let letterSpacing: SingleToken[] = [];
   let paragraphSpacing: SingleToken[] = [];
@@ -119,8 +119,8 @@ export default function pullStyles(styleTypes: PullStyleOptions): void {
       type: TokenTypes.FONT_FAMILIES,
     }));
 
-    fontWeights = uniqueFontCombinations.map((font, idx) => ({
-      name: `fontWeights.${slugify(font.family)}-${idx}`,
+    fontWeight = uniqueFontCombinations.map((font, idx) => ({
+      name: `fontWeight.${slugify(font.family)}-${idx}`,
       value: font.style,
       type: TokenTypes.FONT_WEIGHTS,
     }));
@@ -162,7 +162,7 @@ export default function pullStyles(styleTypes: PullStyleOptions): void {
 
     typography = figmaTextStyles.map((style) => {
       const foundFamily = fontFamilies.find((el: SingleToken) => el.value === style.fontName.family);
-      const foundFontWeight = fontWeights.find(
+      const foundFontWeight = fontWeight.find(
         (el: SingleToken) => el.name.includes(slugify(style.fontName.family)) && el.value === style.fontName?.style,
       );
       const foundLineHeight = lineHeights.find(
@@ -259,7 +259,7 @@ export default function pullStyles(styleTypes: PullStyleOptions): void {
     effects,
     fontFamilies,
     lineHeights,
-    fontWeights,
+    fontWeight,
     fontSizes,
     letterSpacing,
     paragraphSpacing,

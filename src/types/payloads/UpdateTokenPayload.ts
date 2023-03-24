@@ -9,7 +9,7 @@ import {
   SingleBorderWidthToken,
   SingleBoxShadowToken,
   SingleFontFamiliesToken,
-  SingleFontWeightsToken,
+  SinglefontWeightToken,
   SingleLineHeightsToken,
   SingleLetterSpacingToken,
   SingleFontSizesToken,
@@ -46,7 +46,7 @@ export type UpdateTokenPayload =
   | GenericTokenInput<TokenTypes.BORDER_WIDTH, SingleBorderWidthToken['value']>
   | GenericTokenInput<TokenTypes.BOX_SHADOW, SingleBoxShadowToken['value']>
   | GenericTokenInput<TokenTypes.FONT_FAMILIES, SingleFontFamiliesToken['value']>
-  | GenericTokenInput<TokenTypes.FONT_WEIGHTS, SingleFontWeightsToken['value']>
+  | GenericTokenInput<TokenTypes.FONT_WEIGHTS, SinglefontWeightToken['value']>
   | GenericTokenInput<TokenTypes.LINE_HEIGHTS, SingleLineHeightsToken['value']>
   | GenericTokenInput<TokenTypes.LETTER_SPACING, SingleLetterSpacingToken['value']>
   | GenericTokenInput<TokenTypes.FONT_SIZES, SingleFontSizesToken['value']>

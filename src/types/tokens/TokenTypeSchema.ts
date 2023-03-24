@@ -13,6 +13,7 @@ export type TokenTypeSchema = {
   explainer?: string;
   help?: string;
   isPro?: boolean;
+  suggestions?: string[];
   schemas: {
     value: ObjectSchemaType;
   }

@@ -371,7 +371,7 @@ describe('Initiator', () => {
                 {
                   fontFamily: '{fontFamilies.inter}',
                   fontSize: '{fontSize.0}',
-                  fontWeight: '{fontWeights.inter-0}',
+                  fontWeight: '{fontWeight.inter-0}',
                   letterSpacing: '{letterSpacing.0}',
                   lineHeight: '{lineHeights.0}',
                   paragraphSpacing: '{paragraphSpacing.0}',
@@ -408,7 +408,7 @@ describe('Initiator', () => {
         {
           fontFamily: '{fontFamilies.inter}',
           fontSize: '{fontSize.0}',
-          fontWeight: '{fontWeights.inter-0}',
+          fontWeight: '{fontWeight.inter-0}',
           letterSpacing: '{letterSpacing.0}',
           lineHeight: '{lineHeights.0}',
           paragraphSpacing: '{paragraphSpacing.0}',

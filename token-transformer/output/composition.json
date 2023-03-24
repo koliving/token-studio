@@ -16,7 +16,7 @@
     "fontWeight": {
       "value": "Bold",
       "description": "Weight value",
-      "type": "fontWeights"
+      "type": "fontWeight"
     },
     "header": {
       "fontFamily": {
@@ -29,7 +29,7 @@
       },
       "fontWeight": {
         "value": "Bold",
-        "type": "fontWeights"
+        "type": "fontWeight"
       }
     },
     "body": {

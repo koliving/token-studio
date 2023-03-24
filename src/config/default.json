@@ -520,22 +520,22 @@
         "type": "paragraphSpacing"
       }
     },
-    "fontWeights": {
+    "fontWeight": {
       "headingRegular": {
         "value": "Regular",
-        "type": "fontWeights"
+        "type": "fontWeight"
       },
       "headingBold": {
         "value": "Bold",
-        "type": "fontWeights"
+        "type": "fontWeight"
       },
       "bodyRegular": {
         "value": "Regular",
-        "type": "fontWeights"
+        "type": "fontWeight"
       },
       "bodyBold": {
         "value": "Bold",
-        "type": "fontWeights"
+        "type": "fontWeight"
       }
     },
     "fontSizes": {
@@ -741,7 +741,7 @@
           "type": "typography",
           "value": {
             "fontFamily": "{fontFamilies.heading}",
-            "fontWeight": "{fontWeights.headingBold}",
+            "fontWeight": "{fontWeight.headingBold}",
             "lineHeight": "{lineHeights.heading}",
             "fontSize": "{fontSizes.h1}",
             "paragraphSpacing": "{paragraphSpacing.h1}",
@@ -752,7 +752,7 @@
           "type": "typography",
           "value": {
             "fontFamily": "{fontFamilies.heading}",
-            "fontWeight": "{fontWeights.headingRegular}",
+            "fontWeight": "{fontWeight.headingRegular}",
             "lineHeight": "{lineHeights.heading}",
             "fontSize": "{fontSizes.h1}",
             "paragraphSpacing": "{paragraphSpacing.h1}",
@@ -765,7 +765,7 @@
           "type": "typography",
           "value": {
             "fontFamily": "{fontFamilies.heading}",
-            "fontWeight": "{fontWeights.headingBold}",
+            "fontWeight": "{fontWeight.headingBold}",
             "lineHeight": "{lineHeights.heading}",
             "fontSize": "{fontSizes.h2}",
             "paragraphSpacing": "{paragraphSpacing.h2}",
@@ -776,7 +776,7 @@
           "type": "typography",
           "value": {
             "fontFamily": "{fontFamilies.heading}",
-            "fontWeight": "{fontWeights.headingRegular}",
+            "fontWeight": "{fontWeight.headingRegular}",
             "lineHeight": "{lineHeights.heading}",
             "fontSize": "{fontSizes.h2}",
             "paragraphSpacing": "{paragraphSpacing.h2}",
@@ -788,7 +788,7 @@
         "type": "typography",
         "value": {
           "fontFamily": "{fontFamilies.body}",
-          "fontWeight": "{fontWeights.bodyRegular}",
+          "fontWeight": "{fontWeight.bodyRegular}",
           "lineHeight": "{lineHeights.heading}",
           "fontSize": "{fontSizes.body}",
           "paragraphSpacing": "{paragraphSpacing.h2}"

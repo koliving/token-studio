@@ -104,8 +104,8 @@ describe('useTypeForProperty', () => {
       output: 'fontFamilies',
     },
     {
-      input: 'fontWeights',
-      output: 'fontWeights',
+      input: 'fontWeight',
+      output: 'fontWeight',
     },
     {
       input: 'fontSizes',

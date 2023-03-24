@@ -1,8 +1,40 @@
 import { Properties } from '@/constants/Properties';
+import horizontalResizingToken from './tokens/HorizontalResizingToken';
+import layoutAlignItemsToken from './tokens/LayoutAlignItemsToken';
+import layoutModeToken from './tokens/LayoutModeToken';
+import layoutPositioningToken from './tokens/LayoutPositioningToken';
+import maxWidthToken from './tokens/MaxWidthToken';
+import transformXToken from './tokens/TransformXToken';
+import transformYToken from './tokens/TransformYToken';
+import verticalResizingToken from './tokens/VerticalResizingToken';
 
 export default function removeValuesFromNode(node: BaseNode, prop: Properties) {
   // BORDER RADIUS
   switch (prop) {
+    case layoutModeToken.key:
+      layoutModeToken.unset(node);
+      break;
+    case horizontalResizingToken.key:
+      horizontalResizingToken.unset(node);
+      break;
+    case verticalResizingToken.key:
+      verticalResizingToken.unset(node);
+      break;
+    case layoutPositioningToken.key:
+      layoutPositioningToken.unset(node);
+      break;
+    case layoutAlignItemsToken.key:
+      layoutAlignItemsToken.unset(node);
+      break;
+    case maxWidthToken.key:
+      maxWidthToken.unset(node);
+      break;
+    case transformXToken.key:
+      transformXToken.unset(node);
+      break;
+    case transformYToken.key:
+      transformYToken.unset(node);
+      break;
     case 'borderRadius':
       if (
         'cornerRadius' in node

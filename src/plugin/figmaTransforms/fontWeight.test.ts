@@ -1,7 +1,7 @@
 import { convertFontWeightToFigma } from './fontWeight';
 
 describe('fontWeight', () => {
-  const fontWeights = [
+  const fontWeight = [
     {
       input: '100',
       output: ['Thin', 'Hairline'],
@@ -44,7 +44,7 @@ describe('fontWeight', () => {
     },
   ];
   it('should convert numerical font weight to figma font weight', () => {
-    fontWeights.forEach((fontWeight) => {
+    fontWeight.forEach((fontWeight) => {
       expect(convertFontWeightToFigma(fontWeight.input)).toEqual(fontWeight.output);
     });
   });

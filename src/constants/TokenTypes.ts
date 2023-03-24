@@ -10,7 +10,7 @@ export enum TokenTypes {
   BORDER_WIDTH = 'borderWidth',
   BOX_SHADOW = 'boxShadow',
   FONT_FAMILIES = 'fontFamilies',
-  FONT_WEIGHTS = 'fontWeights',
+  FONT_WEIGHTS = 'fontWeight',
   LINE_HEIGHTS = 'lineHeights',
   FONT_SIZES = 'fontSizes',
   LETTER_SPACING = 'letterSpacing',

@@ -190,7 +190,7 @@ describe('SingleFileExport', () => {
             },
             fontWeight: {
               value: 'Bold',
-              type: 'fontWeights',
+              type: 'fontWeight',
             },
           },
           alias: {

@@ -26,6 +26,14 @@ import { isCompositeBorderValue } from '@/utils/is/isCompositeBorderValue';
 import { setBorderColorValuesOnTarget } from './setBorderColorValuesOnTarget';
 import removeValuesFromNode from './removeValuesFromNode';
 import { Properties } from '@/constants/Properties';
+import layoutModeToken from './tokens/LayoutModeToken';
+import horizontalResizingToken from './tokens/HorizontalResizingToken';
+import verticalResizingToken from './tokens/VerticalResizingToken';
+import layoutPositioningToken from './tokens/LayoutPositioningToken';
+import layoutAlignItemsToken from './tokens/LayoutAlignItemsToken';
+import maxWidthToken from './tokens/MaxWidthToken';
+import transformXToken from './tokens/TransformXToken';
+import transformYToken from './tokens/TransformYToken';
 
 // @README values typing is wrong
 
@@ -46,6 +54,15 @@ export default async function setValuesOnNode(
   const stylePathPrefix = prefixStylesWithThemeName && activeThemeObject ? activeThemeObject.name : null;
 
   try {
+    layoutModeToken.applyFromTokensResult(node, values);
+    horizontalResizingToken.applyFromTokensResult(node, values);
+    verticalResizingToken.applyFromTokensResult(node, values);
+    layoutPositioningToken.applyFromTokensResult(node, values);
+    layoutAlignItemsToken.applyFromTokensResult(node, values);
+    maxWidthToken.applyFromTokensResult(node, values);
+    transformXToken.applyFromTokensResult(node, values);
+    transformYToken.applyFromTokensResult(node, values);
+
     // BORDER RADIUS
     if (
       node.type !== 'CONNECTOR'
@@ -309,7 +326,7 @@ export default async function setValuesOnNode(
       }
       if (
         values.fontFamilies
-        || values.fontWeights
+        || values.fontWeight
         || values.lineHeights
         || values.fontSizes
         || values.letterSpacing
@@ -321,7 +338,7 @@ export default async function setValuesOnNode(
           setTextValuesOnTarget(node, {
             value: {
               fontFamily: isPrimitiveValue(values.fontFamilies) ? String(values.fontFamilies) : undefined,
-              fontWeight: isPrimitiveValue(values.fontWeights) ? String(values.fontWeights) : undefined,
+              fontWeight: isPrimitiveValue(values.fontWeight) ? String(values.fontWeight) : undefined,
               lineHeight: isPrimitiveValue(values.lineHeights) ? String(values.lineHeights) : undefined,
               fontSize: isPrimitiveValue(values.fontSizes) ? String(values.fontSizes) : undefined,
               letterSpacing: isPrimitiveValue(values.letterSpacing) ? String(values.letterSpacing) : undefined,

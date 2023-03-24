@@ -3,12 +3,7 @@ import { useUIDSeed } from 'react-uid';
 import IconMinus from '@/icons/minus.svg';
 import IconButton from './IconButton';
 import Box from './Box';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuTrigger,
-  DropdownMenuRadioGroup,
-} from './DropdownMenu';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger, DropdownMenuRadioGroup } from './DropdownMenu';
 import { DropdownMenuRadioElement } from './DropdownMenuRadioElement';
 import { Properties } from '@/constants/Properties';
 import { CompositionTokenProperty } from '@/types/CompositionTokenProperty';
@@ -16,6 +11,7 @@ import { NodeTokenRefMap } from '@/types/NodeTokenRefMap';
 import DownshiftInput from './DownshiftInput';
 import { ResolveTokenValuesResult } from '@/plugin/tokenHelpers';
 import { useTypeForProperty } from '../hooks/useTypeForProperty';
+import tokenTypes from '@/config/tokenType.defs.json';
 
 export default function SingleCompositionTokenForm({
   index,
@@ -44,22 +40,25 @@ export default function SingleCompositionTokenForm({
   const propertyType = useTypeForProperty(property);
   const seed = useUIDSeed();
 
-  const onPropertySelected = useCallback((newProperty: string) => {
-    // keep the order of the properties when select new property
-    const newOrderObj: NodeTokenRefMap = {};
-    const keysInTokenValue = Object.keys(tokenValue);
-    keysInTokenValue.splice(index, 1, newProperty);
-    keysInTokenValue.forEach((key, index) => {
-      newOrderObj[key as keyof typeof Properties] = String(index);
-    });
-    setOrderObj(newOrderObj);
+  const onPropertySelected = useCallback(
+    (newProperty: string) => {
+      // keep the order of the properties when select new property
+      const newOrderObj: NodeTokenRefMap = {};
+      const keysInTokenValue = Object.keys(tokenValue);
+      keysInTokenValue.splice(index, 1, newProperty);
+      keysInTokenValue.forEach((key, index) => {
+        newOrderObj[key as keyof typeof Properties] = String(index);
+      });
+      setOrderObj(newOrderObj);
 
-    // set newTokenValue
-    delete tokenValue[property as keyof typeof Properties];
-    tokenValue[newProperty as keyof typeof Properties] = propertyValue;
-    setTokenValue(tokenValue);
-    setError(false);
-  }, [tokenValue]);
+      // set newTokenValue
+      delete tokenValue[property as keyof typeof Properties];
+      tokenValue[newProperty as keyof typeof Properties] = propertyValue;
+      setTokenValue(tokenValue);
+      setError(false);
+    },
+    [tokenValue],
+  );
 
   const onPropertyValueChanged = React.useCallback<React.ChangeEventHandler<HTMLInputElement>>(
     (e) => {
@@ -69,10 +68,13 @@ export default function SingleCompositionTokenForm({
     [tokenValue],
   );
 
-  const handleDownShiftInputChange = React.useCallback((newInputValue: string) => {
-    tokenValue[property as CompositionTokenProperty] = newInputValue;
-    setTokenValue(tokenValue);
-  }, [tokenValue]);
+  const handleDownShiftInputChange = React.useCallback(
+    (newInputValue: string) => {
+      tokenValue[property as CompositionTokenProperty] = newInputValue;
+      setTokenValue(tokenValue);
+    },
+    [tokenValue],
+  );
 
   const handleToggleMenu = useCallback(() => {
     setMenuOpened(!menuOpened);
@@ -84,31 +86,47 @@ export default function SingleCompositionTokenForm({
 
   return (
     <Box>
-      <Box css={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        gap: '$3',
-        '& > .relative ': {
-          flex: '2',
-        },
-      }}
+      <Box
+        css={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          gap: '$3',
+          '& > .relative ': {
+            flex: '2',
+          },
+        }}
       >
         <DropdownMenu open={menuOpened} onOpenChange={handleToggleMenu}>
           <DropdownMenuTrigger
             data-cy="composition-token-dropdown"
             bordered
             css={{
-              width: '130px', whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden', height: '$10',
+              width: '130px',
+              whiteSpace: 'nowrap',
+              textOverflow: 'ellipsis',
+              overflow: 'hidden',
+              height: '$10',
             }}
           >
             {property || 'Choose a property'}
           </DropdownMenuTrigger>
-          <DropdownMenuContent sideOffset={2} className="content scroll-container" css={{ maxHeight: '$dropdownMaxHeight' }}>
+          <DropdownMenuContent
+            sideOffset={2}
+            className="content scroll-container"
+            css={{ maxHeight: '$dropdownMaxHeight' }}
+          >
             {' '}
             <DropdownMenuRadioGroup value={property}>
-              {properties.length > 0
-                && properties.map((property, index) => <DropdownMenuRadioElement key={`property-${seed(index)}`} item={property} index={index} itemSelected={onPropertySelected} />)}
+              {properties.length > 0 &&
+                properties.map((property, index) => (
+                  <DropdownMenuRadioElement
+                    key={`property-${seed(index)}`}
+                    item={property}
+                    index={index}
+                    itemSelected={onPropertySelected}
+                  />
+                ))}
             </DropdownMenuRadioGroup>
           </DropdownMenuContent>
         </DropdownMenu>
@@ -116,12 +134,20 @@ export default function SingleCompositionTokenForm({
           <DownshiftInput
             value={propertyValue}
             type={propertyType}
-            resolvedTokens={resolvedTokens}
+            resolvedTokens={[
+              ...resolvedTokens,
+              ...((Array.isArray((tokenTypes as any)[propertyType]?.suggestions)
+                ? (tokenTypes as any)[propertyType]?.suggestions.map((e: any) => ({
+                    name: e,
+                    type: propertyType,
+                    value: e,
+                    isSuggestion: true,
+                  }))
+                : []) as ResolveTokenValuesResult[]),
+            ]}
             handleChange={onPropertyValueChanged}
             setInputValue={handleDownShiftInputChange}
-            placeholder={
-            propertyType === 'color' ? '#000000, hsla(), rgba() or {alias}' : 'Value or {alias}'
-          }
+            placeholder={propertyType === 'color' ? '#000000, hsla(), rgba() or {alias}' : 'Value or {alias}'}
             suffix
           />
         </Box>
