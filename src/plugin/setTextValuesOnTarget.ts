@@ -35,7 +35,7 @@ export default async function setTextValuesOnTarget(
         }
       } catch (e) {
         const splitFontFamily = family.split(',');
-        const candidateStyles = transformValue(style, 'fontWeights', baseFontSize);
+        const candidateStyles = transformValue(style, 'fontWeight', baseFontSize);
         const candidateFonts: { family: string; style: string }[] = [];
         splitFontFamily?.forEach((candidateFontFamily) => {
           const normalizedFontFamily = candidateFontFamily?.replace(/['"]/g, '').trim();

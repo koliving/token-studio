@@ -118,11 +118,11 @@ const tokenTypes = {
       },
     },
   },
-  fontWeights: {
+  fontWeight: {
     help: 'Only works in combination with a Font Family',
     label: 'Font Weight',
     property: 'Font Weight',
-    type: 'fontWeights',
+    type: 'fontWeight',
     schema: {
       options: {
         description: '',

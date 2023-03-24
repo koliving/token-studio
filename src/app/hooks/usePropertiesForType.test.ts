@@ -136,11 +136,11 @@ describe('usePropertiesForTokenType', () => {
       ],
     },
     {
-      type: 'fontWeights',
+      type: 'fontWeight',
       properties: [
         {
-          name: 'fontWeights',
-          label: 'fontWeights',
+          name: 'fontWeight',
+          label: 'fontWeight',
         },
       ],
     },

@@ -28,7 +28,7 @@ export async function getUserId() {
   return userId;
 }
 
-export function transformValue(value: string, type: 'fontWeights', baseFontSize: string): ReturnType<typeof convertFontWeightToFigma>;
+export function transformValue(value: string, type: 'fontWeight', baseFontSize: string): ReturnType<typeof convertFontWeightToFigma>;
 export function transformValue(value: string, type: 'letterSpacing', baseFontSize: string): LetterSpacing | null;
 export function transformValue(value: string, type: 'lineHeights', baseFontSize: string): LineHeight | null;
 export function transformValue(value: string, type: 'boxShadowType', baseFontSize: string): ReturnType<typeof convertBoxShadowTypeToFigma>;
@@ -64,7 +64,7 @@ export function transformValue(value: string, type: string, baseFontSize: string
     case 'paragraphIndent':
     case 'fontSizes':
       return convertTypographyNumberToFigma(value, baseFontSize);
-    case 'fontWeights':
+    case 'fontWeight':
       return convertFontWeightToFigma(value);
     case 'letterSpacing':
       return convertLetterSpacingToFigma(value, baseFontSize);

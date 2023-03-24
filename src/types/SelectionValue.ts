@@ -22,7 +22,7 @@ export interface SelectionValue {
   boxShadow?: string;
   opacity?: string;
   fontFamilies?: string;
-  fontWeights?: string;
+  fontWeight?: string;
   fontSizes?: string;
   lineHeights?: string;
   typography?: string;

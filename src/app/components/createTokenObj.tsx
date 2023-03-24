@@ -29,7 +29,7 @@ export function transformName(name: string): TokenTypes {
       return TokenTypes.OPACITY;
     case 'fontFamilies':
       return TokenTypes.FONT_FAMILIES;
-    case 'fontWeights':
+    case 'fontWeight':
       return TokenTypes.FONT_WEIGHTS;
     case 'fontSizes':
       return TokenTypes.FONT_SIZES;

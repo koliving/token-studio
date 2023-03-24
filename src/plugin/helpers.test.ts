@@ -69,12 +69,12 @@ describe('transformValue', () => {
     },
     {
       input: '100',
-      type: 'fontWeights',
+      type: 'fontWeight',
       output: ['Thin', 'Hairline'],
     },
     {
       input: 'bold',
-      type: 'fontWeights',
+      type: 'fontWeight',
       output: [],
     },
   ];

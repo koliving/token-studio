@@ -326,7 +326,7 @@ export default async function setValuesOnNode(
       }
       if (
         values.fontFamilies
-        || values.fontWeights
+        || values.fontWeight
         || values.lineHeights
         || values.fontSizes
         || values.letterSpacing
@@ -338,7 +338,7 @@ export default async function setValuesOnNode(
           setTextValuesOnTarget(node, {
             value: {
               fontFamily: isPrimitiveValue(values.fontFamilies) ? String(values.fontFamilies) : undefined,
-              fontWeight: isPrimitiveValue(values.fontWeights) ? String(values.fontWeights) : undefined,
+              fontWeight: isPrimitiveValue(values.fontWeight) ? String(values.fontWeight) : undefined,
               lineHeight: isPrimitiveValue(values.lineHeights) ? String(values.lineHeights) : undefined,
               fontSize: isPrimitiveValue(values.fontSizes) ? String(values.fontSizes) : undefined,
               letterSpacing: isPrimitiveValue(values.letterSpacing) ? String(values.letterSpacing) : undefined,

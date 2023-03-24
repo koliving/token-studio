@@ -114,10 +114,10 @@
       "value": { "type": "string" }
     }
   },
-  "fontWeights": {
+  "fontWeight": {
     "label": "Font Weight",
     "property": "Font Weight",
-    "type": "fontWeights",
+    "type": "fontWeight",
     "schemas": {
       "value": { "type": "string" }
     }

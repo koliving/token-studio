@@ -8,7 +8,7 @@ import { SingleCompositionToken } from './SingleCompositionToken';
 import { SingleDimensionToken } from './SingleDimensionToken';
 import { SingleFontFamiliesToken } from './SingleFontFamiliesToken';
 import { SingleFontSizesToken } from './SingleFontSizesToken';
-import { SingleFontWeightsToken } from './SingleFontWeightsToken';
+import { SinglefontWeightToken } from './SinglefontWeightToken';
 import { SingleLetterSpacingToken } from './SingleLetterSpacingToken';
 import { SingleLineHeightsToken } from './SingleLineHeightsToken';
 import { SingleOpacityToken } from './SingleOpacityToken';
@@ -39,7 +39,7 @@ PartialExceptTypeAndSchema<Named, SingleColorToken<Named, EditTokenObjectPropert
 | PartialExceptTypeAndSchema<Named, SingleBorderWidthToken<Named, EditTokenObjectProperties>>
 | PartialExceptTypeAndSchema<Named, SingleBoxShadowToken<Named, EditTokenObjectProperties>>
 | PartialExceptTypeAndSchema<Named, SingleFontFamiliesToken<Named, EditTokenObjectProperties>>
-| PartialExceptTypeAndSchema<Named, SingleFontWeightsToken<Named, EditTokenObjectProperties>>
+| PartialExceptTypeAndSchema<Named, SinglefontWeightToken<Named, EditTokenObjectProperties>>
 | PartialExceptTypeAndSchema<Named, SingleLineHeightsToken<Named, EditTokenObjectProperties>>
 | PartialExceptTypeAndSchema<Named, SingleLetterSpacingToken<Named, EditTokenObjectProperties>>
 | PartialExceptTypeAndSchema<Named, SingleFontSizesToken<Named, EditTokenObjectProperties>>

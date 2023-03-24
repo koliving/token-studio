@@ -46,7 +46,7 @@ export const stitchesInstance = createStitches({
       medium: '14px',
       large: '16px',
     },
-    fontWeights: {
+    fontWeight: {
       normal: 300,
       bold: 500,
     },

@@ -9,7 +9,7 @@ export * from './SingleSpacingToken';
 export * from './SingleBorderWidthToken';
 export * from './SingleBoxShadowToken';
 export * from './SingleFontFamiliesToken';
-export * from './SingleFontWeightsToken';
+export * from './SinglefontWeightToken';
 export * from './SingleLineHeightsToken';
 export * from './SingleLetterSpacingToken';
 export * from './SingleFontSizesToken';

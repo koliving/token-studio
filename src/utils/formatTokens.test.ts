@@ -120,7 +120,7 @@ describe('formatTokens', () => {
                   },
                   fontWeight: {
                     value: 'Bold',
-                    type: 'fontWeights',
+                    type: 'fontWeight',
                   },
                   fontSize: {
                     value: 36,
@@ -134,7 +134,7 @@ describe('formatTokens', () => {
                   },
                   fontWeight: {
                     value: 'Regular',
-                    type: 'fontWeights',
+                    type: 'fontWeight',
                   },
                   fontSize: {
                     value: 24,
@@ -148,7 +148,7 @@ describe('formatTokens', () => {
                   },
                   fontWeight: {
                     value: 'Bold',
-                    type: 'fontWeights',
+                    type: 'fontWeight',
                   },
                   fontSize: {
                     value: 36,

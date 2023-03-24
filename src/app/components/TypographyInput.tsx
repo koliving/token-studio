@@ -17,7 +17,7 @@ import Stack from './Stack';
 const properties = {
   fontSize: 'fontSizes',
   fontFamily: 'fontFamilies',
-  fontWeight: 'fontWeights',
+  fontWeight: 'fontWeight',
   letterSpacing: 'letterSpacing',
   paragraphSpacing: 'paragraphSpacing',
   paragraphIndent: 'paragraphIndent',

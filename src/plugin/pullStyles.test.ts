@@ -109,7 +109,7 @@ describe('pullStyles', () => {
           type: 'typography',
           value: {
             fontFamily: '{fontFamilies.inter}',
-            fontWeight: '{fontWeights.inter-0}',
+            fontWeight: '{fontWeight.inter-0}',
             fontSize: '{fontSize.1}',
             letterSpacing: '{letterSpacing.0}',
             lineHeight: '{lineHeights.0}',
@@ -125,7 +125,7 @@ describe('pullStyles', () => {
           type: 'typography',
           value: {
             fontFamily: '{fontFamilies.inter}',
-            fontWeight: '{fontWeights.inter-1}',
+            fontWeight: '{fontWeight.inter-1}',
             fontSize: '{fontSize.0}',
             letterSpacing: '{letterSpacing.0}',
             lineHeight: '{lineHeights.0}',
@@ -141,7 +141,7 @@ describe('pullStyles', () => {
           type: 'typography',
           value: {
             fontFamily: '{fontFamilies.roboto}',
-            fontWeight: '{fontWeights.roboto-2}',
+            fontWeight: '{fontWeight.roboto-2}',
             fontSize: '{fontSize.0}',
             letterSpacing: '{letterSpacing.0}',
             lineHeight: '{lineHeights.0}',
@@ -157,10 +157,10 @@ describe('pullStyles', () => {
         { name: 'fontFamilies.roboto', type: 'fontFamilies', value: 'Roboto' },
       ],
       lineHeights: [{ name: 'lineHeights.0', type: 'lineHeights', value: 'AUTO' }],
-      fontWeights: [
-        { name: 'fontWeights.inter-0', type: 'fontWeights', value: 'Bold' },
-        { name: 'fontWeights.inter-1', type: 'fontWeights', value: 'Regular' },
-        { name: 'fontWeights.roboto-2', type: 'fontWeights', value: 'Regular' },
+      fontWeight: [
+        { name: 'fontWeight.inter-0', type: 'fontWeight', value: 'Bold' },
+        { name: 'fontWeight.inter-1', type: 'fontWeight', value: 'Regular' },
+        { name: 'fontWeight.roboto-2', type: 'fontWeight', value: 'Regular' },
       ],
       fontSizes: [
         { name: 'fontSize.0', type: 'fontSizes', value: '16' },
