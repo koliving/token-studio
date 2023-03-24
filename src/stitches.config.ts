@@ -39,14 +39,14 @@ export const stitchesInstance = createStitches({
       sans: 'Inter, sans-serif',
       mono: 'JetBrainsMono, monospace',
     },
-    fontSize: {
+    fontSizes: {
       xxsmall: '10px',
       xsmall: '11px',
       small: '12px',
       medium: '14px',
       large: '16px',
     },
-    fontWeight: {
+    fontWeights: {
       normal: 300,
       bold: 500,
     },

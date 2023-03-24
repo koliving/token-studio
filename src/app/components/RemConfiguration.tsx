@@ -6,14 +6,14 @@ import { TokenTypes } from '@/constants/TokenTypes';
 import { mergeTokenGroups, resolveTokenValues } from '@/plugin/tokenHelpers';
 import { Dispatch } from '../store';
 import {
-  tokensSelector, usedTokenSetSelector, activeTokenSetSelector, aliasBasefontSizeelector,
+  tokensSelector, usedTokenSetSelector, activeTokenSetSelector, aliasBaseFontSizeSelector,
 } from '@/selectors';
 import Box from './Box';
 import DownshiftInput from './DownshiftInput';
 import { getAliasValue } from '@/utils/alias';
 
 const RemConfiguration = () => {
-  const aliasBaseFontSize = useSelector(aliasBasefontSizeelector);
+  const aliasBaseFontSize = useSelector(aliasBaseFontSizeSelector);
   const tokens = useSelector(tokensSelector);
   const usedTokenSet = useSelector(usedTokenSetSelector);
   const activeTokenSet = useSelector(activeTokenSetSelector);
