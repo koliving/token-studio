@@ -9,7 +9,7 @@ describe('transformValue', () => {
     },
     {
       input: '12px',
-      type: 'lineHeights',
+      type: 'lineHeight',
       output: {
         unit: 'PIXELS',
         value: 12,
@@ -17,7 +17,7 @@ describe('transformValue', () => {
     },
     {
       input: '160%',
-      type: 'lineHeights',
+      type: 'lineHeight',
       output: {
         unit: 'PERCENT',
         value: 160,
@@ -41,7 +41,7 @@ describe('transformValue', () => {
     },
     {
       input: '120%',
-      type: 'lineHeights',
+      type: 'lineHeight',
       output: {
         unit: 'PERCENT',
         value: 120,

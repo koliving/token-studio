@@ -73,7 +73,7 @@ describe('Inspector tokens', () => {
         {
           name: 'font-size.12',
           value: '12px',
-          type: 'fontSizes'
+          type: 'fontSize'
         }
         ],
         global: [{
@@ -105,8 +105,8 @@ describe('Inspector tokens', () => {
         }],
       },
       {
-        category: "fontSizes",
-        type: "fontSizes",
+        category: "fontSize",
+        type: "fontSize",
         value: "font-size.12",
         nodes: [{
           id: "1",
@@ -119,7 +119,7 @@ describe('Inspector tokens', () => {
       mainNodeSelectionValues: {
         sizing: "sizing.xs",
         opacity: "opacity.50",
-        fontSizes: "font-size.12",
+        fontSize: "font-size.12",
       }
     });
     cy.get('[data-cy=navitem-inspector]').click({
@@ -154,7 +154,7 @@ describe('Inspector tokens', () => {
         {
           name: 'font-size.12',
           value: '12px',
-          type: 'fontSizes'
+          type: 'fontSize'
         }
         ],
         global: [{
@@ -186,8 +186,8 @@ describe('Inspector tokens', () => {
         }],
       },
       {
-        category: "fontSizes",
-        type: "fontSizes",
+        category: "fontSize",
+        type: "fontSize",
         value: "font-size.12",
         nodes: [{
           id: "1",
@@ -200,7 +200,7 @@ describe('Inspector tokens', () => {
       mainNodeSelectionValues: {
         sizing: "sizing.xs",
         opacity: "opacity.50",
-        fontSizes: "font-size.12",
+        fontSize: "font-size.12",
       }
     });
     cy.get('[data-cy=navitem-inspector]').click({
@@ -230,8 +230,8 @@ describe('Inspector tokens', () => {
         }],
       },
       {
-        category: "fontSizes",
-        type: "fontSizes",
+        category: "fontSize",
+        type: "fontSize",
         value: "font-size.12",
         nodes: [{
           id: "1",
@@ -244,7 +244,7 @@ describe('Inspector tokens', () => {
       mainNodeSelectionValues: {
         sizing: "sizing.xs",
         opacity: "opacity.100",
-        fontSizes: "font-size.12",
+        fontSize: "font-size.12",
       }
     });
 

@@ -139,20 +139,20 @@ describe('createTokenObj', () => {
         output: 'opacity',
       },
       {
-        input: 'fontFamilies',
-        output: 'fontFamilies',
+        input: 'fontFamily',
+        output: 'fontFamily',
       },
       {
         input: 'fontWeight',
         output: 'fontWeight',
       },
       {
-        input: 'fontSizes',
-        output: 'fontSizes',
+        input: 'fontSize',
+        output: 'fontSize',
       },
       {
-        input: 'lineHeights',
-        output: 'lineHeights',
+        input: 'lineHeight',
+        output: 'lineHeight',
       },
       {
         input: 'typography',

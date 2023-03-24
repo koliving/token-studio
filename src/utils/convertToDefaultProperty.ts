@@ -31,16 +31,16 @@ export function convertToDefaultProperty(property: string): string {
       type = Properties.borderWidth;
       break;
     case 'fontFamily':
-      type = Properties.fontFamilies;
+      type = Properties.fontFamily;
       break;
     case 'fontSize':
-      type = Properties.fontSizes;
+      type = Properties.fontSize;
       break;
     case 'fontWeight':
       type = Properties.fontWeight;
       break;
-    case 'lineHeights':
-      type = Properties.lineHeights;
+    case 'lineHeight':
+      type = Properties.lineHeight;
       break;
     case 'style':
       type = 'strokeStyle';

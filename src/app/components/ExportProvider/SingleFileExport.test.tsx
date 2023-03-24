@@ -186,7 +186,7 @@ describe('SingleFileExport', () => {
           headline: {
             fontFamily: {
               value: 'Inter',
-              type: 'fontFamilies',
+              type: 'fontFamily',
             },
             fontWeight: {
               value: 'Bold',

@@ -30,7 +30,7 @@ export async function getUserId() {
 
 export function transformValue(value: string, type: 'fontWeight', baseFontSize: string): ReturnType<typeof convertFontWeightToFigma>;
 export function transformValue(value: string, type: 'letterSpacing', baseFontSize: string): LetterSpacing | null;
-export function transformValue(value: string, type: 'lineHeights', baseFontSize: string): LineHeight | null;
+export function transformValue(value: string, type: 'lineHeight', baseFontSize: string): LineHeight | null;
 export function transformValue(value: string, type: 'boxShadowType', baseFontSize: string): ReturnType<typeof convertBoxShadowTypeToFigma>;
 export function transformValue(value: string, type: 'textCase', baseFontSize: string): ReturnType<typeof convertTextCaseToFigma>;
 export function transformValue(value: string, type: 'textDecoration', baseFontSize: string): ReturnType<typeof convertTextDecorationToFigma>;
@@ -62,13 +62,13 @@ export function transformValue(value: string, type: string, baseFontSize: string
     case 'itemSpacing':
     case 'paragraphSpacing':
     case 'paragraphIndent':
-    case 'fontSizes':
+    case 'fontSize':
       return convertTypographyNumberToFigma(value, baseFontSize);
     case 'fontWeight':
       return convertFontWeightToFigma(value);
     case 'letterSpacing':
       return convertLetterSpacingToFigma(value, baseFontSize);
-    case 'lineHeights':
+    case 'lineHeight':
       return convertLineHeightToFigma(value, baseFontSize);
     case 'opacity':
       return convertOpacityToFigma(value.toString());

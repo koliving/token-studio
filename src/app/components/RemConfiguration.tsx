@@ -6,14 +6,14 @@ import { TokenTypes } from '@/constants/TokenTypes';
 import { mergeTokenGroups, resolveTokenValues } from '@/plugin/tokenHelpers';
 import { Dispatch } from '../store';
 import {
-  tokensSelector, usedTokenSetSelector, activeTokenSetSelector, aliasBaseFontSizeSelector,
+  tokensSelector, usedTokenSetSelector, activeTokenSetSelector, aliasBasefontSizeelector,
 } from '@/selectors';
 import Box from './Box';
 import DownshiftInput from './DownshiftInput';
 import { getAliasValue } from '@/utils/alias';
 
 const RemConfiguration = () => {
-  const aliasBaseFontSize = useSelector(aliasBaseFontSizeSelector);
+  const aliasBaseFontSize = useSelector(aliasBasefontSizeelector);
   const tokens = useSelector(tokensSelector);
   const usedTokenSet = useSelector(usedTokenSetSelector);
   const activeTokenSet = useSelector(activeTokenSetSelector);
@@ -46,7 +46,7 @@ const RemConfiguration = () => {
     <Box css={{ maxWidth: '300px' }}>
       <DownshiftInput
         value={aliasBaseFontSize}
-        type={TokenTypes.FONT_SIZES}
+        type={TokenTypes.FONT_SIZE}
         resolvedTokens={resolvedTokens}
         handleChange={handleBaseFontSizeChange}
         setInputValue={handleDownShiftInputChange}

@@ -21,10 +21,10 @@ export interface SelectionValue {
   borderWidth?: string;
   boxShadow?: string;
   opacity?: string;
-  fontFamilies?: string;
+  fontFamily?: string;
   fontWeight?: string;
-  fontSizes?: string;
-  lineHeights?: string;
+  fontSize?: string;
+  lineHeight?: string;
   typography?: string;
   letterSpacing?: string;
   paragraphSpacing?: string;

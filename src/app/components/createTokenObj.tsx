@@ -27,14 +27,14 @@ export function transformName(name: string): TokenTypes {
       return TokenTypes.BORDER_WIDTH;
     case 'opacity':
       return TokenTypes.OPACITY;
-    case 'fontFamilies':
-      return TokenTypes.FONT_FAMILIES;
+    case 'fontFamily':
+      return TokenTypes.FONT_FAMILY;
     case 'fontWeight':
-      return TokenTypes.FONT_WEIGHTS;
-    case 'fontSizes':
-      return TokenTypes.FONT_SIZES;
-    case 'lineHeights':
-      return TokenTypes.LINE_HEIGHTS;
+      return TokenTypes.FONT_WEIGHT;
+    case 'fontSize':
+      return TokenTypes.FONT_SIZE;
+    case 'lineHeight':
+      return TokenTypes.LINE_HEIGHT;
     case 'typography':
       return TokenTypes.TYPOGRAPHY;
     case 'letterSpacing':

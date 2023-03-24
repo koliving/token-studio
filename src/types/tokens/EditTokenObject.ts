@@ -6,11 +6,11 @@ import { SingleBoxShadowToken } from './SingleBoxShadowToken';
 import { SingleColorToken } from './SingleColorToken';
 import { SingleCompositionToken } from './SingleCompositionToken';
 import { SingleDimensionToken } from './SingleDimensionToken';
-import { SingleFontFamiliesToken } from './SingleFontFamiliesToken';
-import { SingleFontSizesToken } from './SingleFontSizesToken';
-import { SinglefontWeightToken } from './SinglefontWeightToken';
+import { SinglefontFamilyToken } from './SingleFontFamilyToken';
+import { SinglefontSizeToken } from './SingleFontSizeToken';
+import { SinglefontWeightToken } from './SingleFontWeightToken';
 import { SingleLetterSpacingToken } from './SingleLetterSpacingToken';
-import { SingleLineHeightsToken } from './SingleLineHeightsToken';
+import { SinglelineHeightToken } from './SingleLineHeightToken';
 import { SingleOpacityToken } from './SingleOpacityToken';
 import { SingleOtherToken } from './SingleOtherToken';
 import { SingleParagraphSpacingToken } from './SingleParagraphSpacingToken';
@@ -38,11 +38,11 @@ PartialExceptTypeAndSchema<Named, SingleColorToken<Named, EditTokenObjectPropert
 | PartialExceptTypeAndSchema<Named, SingleOpacityToken<Named, EditTokenObjectProperties>>
 | PartialExceptTypeAndSchema<Named, SingleBorderWidthToken<Named, EditTokenObjectProperties>>
 | PartialExceptTypeAndSchema<Named, SingleBoxShadowToken<Named, EditTokenObjectProperties>>
-| PartialExceptTypeAndSchema<Named, SingleFontFamiliesToken<Named, EditTokenObjectProperties>>
+| PartialExceptTypeAndSchema<Named, SinglefontFamilyToken<Named, EditTokenObjectProperties>>
 | PartialExceptTypeAndSchema<Named, SinglefontWeightToken<Named, EditTokenObjectProperties>>
-| PartialExceptTypeAndSchema<Named, SingleLineHeightsToken<Named, EditTokenObjectProperties>>
+| PartialExceptTypeAndSchema<Named, SinglelineHeightToken<Named, EditTokenObjectProperties>>
 | PartialExceptTypeAndSchema<Named, SingleLetterSpacingToken<Named, EditTokenObjectProperties>>
-| PartialExceptTypeAndSchema<Named, SingleFontSizesToken<Named, EditTokenObjectProperties>>
+| PartialExceptTypeAndSchema<Named, SinglefontSizeToken<Named, EditTokenObjectProperties>>
 | PartialExceptTypeAndSchema<Named, SingleParagraphSpacingToken<Named, EditTokenObjectProperties>>
 | PartialExceptTypeAndSchema<Named, SingleTextDecorationToken<Named, EditTokenObjectProperties>>
 | PartialExceptTypeAndSchema<Named, SingleTextCaseToken<Named, EditTokenObjectProperties>>

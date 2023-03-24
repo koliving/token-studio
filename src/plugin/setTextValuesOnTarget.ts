@@ -84,10 +84,10 @@ export default async function setTextValuesOnTarget(
         }
       }
       if (typeof fontSize !== 'undefined') {
-        target.fontSize = transformValue(fontSize, 'fontSizes', baseFontSize);
+        target.fontSize = transformValue(fontSize, 'fontSize', baseFontSize);
       }
       if (typeof lineHeight !== 'undefined') {
-        const transformedValue = transformValue(String(lineHeight), 'lineHeights', baseFontSize);
+        const transformedValue = transformValue(String(lineHeight), 'lineHeight', baseFontSize);
         if (transformedValue !== null) {
           target.lineHeight = transformedValue;
         }

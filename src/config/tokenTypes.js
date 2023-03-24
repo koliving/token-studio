@@ -107,11 +107,11 @@ const tokenTypes = {
     help:
       "If a (local) style is found with the same name it will match to that, if not, will use raw font values. Use 'Create Style' to batch-create styles from your tokens (e.g. in your design library). In the future we'll load all 'remote' styles and reference them inside the JSON.",
   },
-  fontFamilies: {
+  fontFamily: {
     help: 'Only works in combination with a Font Weight',
     label: 'Font Family',
     property: 'Font Family',
-    type: 'fontFamilies',
+    type: 'fontFamily',
     schema: {
       options: {
         description: '',
@@ -129,21 +129,21 @@ const tokenTypes = {
       },
     },
   },
-  lineHeights: {
+  lineHeight: {
     label: 'Line Height',
     explainer: 'e.g. 100% or 14',
     property: 'Line Height',
-    type: 'lineHeights',
+    type: 'lineHeight',
     schema: {
       options: {
         description: '',
       },
     },
   },
-  fontSizes: {
+  fontSize: {
     label: 'Font Size',
     property: 'Font Size',
-    type: 'fontSizes',
+    type: 'fontSize',
     schema: {
       options: {
         description: '',

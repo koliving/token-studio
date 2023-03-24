@@ -28,11 +28,11 @@ export function textStyleMatchesTypographyToken(
   if (textStyle.fontName.style !== fontWeight) {
     return false;
   }
-  if (fontSize === undefined || textStyle.fontSize !== transformValue(fontSize, 'fontSizes', baseFontSize)) {
+  if (fontSize === undefined || textStyle.fontSize !== transformValue(fontSize, 'fontSize', baseFontSize)) {
     return false;
   }
   // This will default to `{ unit: 'AUTO' }` if lineHeight token is not set:
-  const tokenLineHeight = transformValue(String(lineHeight), 'lineHeights', baseFontSize);
+  const tokenLineHeight = transformValue(String(lineHeight), 'lineHeight', baseFontSize);
   if (tokenLineHeight?.unit !== textStyle.lineHeight.unit) {
     let hasMismatch = true;
     if (tokenLineHeight && tokenLineHeight.unit !== 'AUTO' && textStyle.lineHeight.unit !== 'AUTO') {

@@ -100,16 +100,16 @@ describe('useTypeForProperty', () => {
       output: 'opacity',
     },
     {
-      input: 'fontFamilies',
-      output: 'fontFamilies',
+      input: 'fontFamily',
+      output: 'fontFamily',
     },
     {
       input: 'fontWeight',
       output: 'fontWeight',
     },
     {
-      input: 'fontSizes',
-      output: 'fontSizes',
+      input: 'fontSize',
+      output: 'fontSize',
     },
   ];
   it('should return default property', () => {

@@ -105,10 +105,10 @@
       }
     }
   },
-  "fontFamilies": {
+  "fontFamily": {
     "label": "Font Family",
     "property": "Font Family",
-    "type": "fontFamilies",
+    "type": "fontFamily",
     "help": "Only works in combination with a Font Weight",
     "schemas": {
       "value": { "type": "string" }
@@ -122,19 +122,19 @@
       "value": { "type": "string" }
     }
   },
-  "lineHeights": {
+  "lineHeight": {
     "label": "Line Height",
     "property": "Line Height",
-    "type": "lineHeights",
+    "type": "lineHeight",
     "explainer": "e.g. 100% or 14",
     "schemas": {
       "value": { "type": "string" }
     }
   },
-  "fontSizes": {
+  "fontSize": {
     "label": "Font Size",
     "property": "Font Size",
-    "type": "fontSizes",
+    "type": "fontSize",
     "schemas": {
       "value": { "type": "string" }
     }

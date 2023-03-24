@@ -41,15 +41,15 @@ describe('Initiator', () => {
               value: 'opacity.50',
             },
             {
-              category: 'fontSizes',
-              type: 'fontSizes',
+              category: 'fontSize',
+              type: 'fontSize',
               value: 'font-size.12',
             }],
             selectedNodes: 1,
             mainNodeSelectionValues: [{
               sizing: 'sizing.xs',
               opacity: 'opacity.50',
-              fontSizes: 'font-size.12',
+              fontSize: 'font-size.12',
             }],
           },
         },
@@ -58,7 +58,7 @@ describe('Initiator', () => {
     expect(mockStore.getState().uiState.mainNodeSelectionValues).toEqual({
       sizing: 'sizing.xs',
       opacity: 'opacity.50',
-      fontSizes: 'font-size.12',
+      fontSize: 'font-size.12',
     });
     expect(mockStore.getState().uiState.selectionValues).toEqual([{
       category: 'sizing',
@@ -71,8 +71,8 @@ describe('Initiator', () => {
       value: 'opacity.50',
     },
     {
-      category: 'fontSizes',
-      type: 'fontSizes',
+      category: 'fontSize',
+      type: 'fontSize',
       value: 'font-size.12',
     }]);
     result.unmount();
@@ -97,7 +97,7 @@ describe('Initiator', () => {
               sizing: 'sizing.xs',
             }, {
               opacity: 'opacity.50',
-              fontSizes: 'font-size.12',
+              fontSize: 'font-size.12',
             }],
           },
         },
@@ -106,7 +106,7 @@ describe('Initiator', () => {
     expect(mockStore.getState().uiState.mainNodeSelectionValues).toEqual({
       sizing: 'sizing.xs',
       opacity: 'opacity.50',
-      fontSizes: 'font-size.12',
+      fontSize: 'font-size.12',
     });
     result.unmount();
   });
@@ -369,11 +369,11 @@ describe('Initiator', () => {
               ],
               typography: [
                 {
-                  fontFamily: '{fontFamilies.inter}',
+                  fontFamily: '{fontFamily.inter}',
                   fontSize: '{fontSize.0}',
                   fontWeight: '{fontWeight.inter-0}',
                   letterSpacing: '{letterSpacing.0}',
-                  lineHeight: '{lineHeights.0}',
+                  lineHeight: '{lineHeight.0}',
                   paragraphSpacing: '{paragraphSpacing.0}',
                   textCase: '{textCase.none}',
                   textDecoration: '{textDecoration.none}',
@@ -406,11 +406,11 @@ describe('Initiator', () => {
           },
         },
         {
-          fontFamily: '{fontFamilies.inter}',
+          fontFamily: '{fontFamily.inter}',
           fontSize: '{fontSize.0}',
           fontWeight: '{fontWeight.inter-0}',
           letterSpacing: '{letterSpacing.0}',
-          lineHeight: '{lineHeights.0}',
+          lineHeight: '{lineHeight.0}',
           paragraphSpacing: '{paragraphSpacing.0}',
           textCase: '{textCase.none}',
           textDecoration: '{textDecoration.none}',

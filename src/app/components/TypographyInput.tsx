@@ -15,14 +15,14 @@ import DownshiftInput from './DownshiftInput';
 import Stack from './Stack';
 
 const properties = {
-  fontSize: 'fontSizes',
-  fontFamily: 'fontFamilies',
+  fontSize: 'fontSize',
+  fontFamily: 'fontFamily',
   fontWeight: 'fontWeight',
   letterSpacing: 'letterSpacing',
   paragraphSpacing: 'paragraphSpacing',
   paragraphIndent: 'paragraphIndent',
   textDecoration: 'textDecoration',
-  lineHeight: 'lineHeights',
+  lineHeight: 'lineHeight',
   textCase: 'textCase',
 };
 

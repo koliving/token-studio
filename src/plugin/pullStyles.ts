@@ -19,10 +19,10 @@ export default function pullStyles(styleTypes: PullStyleOptions): void {
   let colors: SingleToken[] = [];
   let typography: SingleToken[] = [];
   let effects: SingleToken[] = [];
-  let fontFamilies: SingleToken[] = [];
-  let lineHeights: SingleToken[] = [];
+  let fontFamily: SingleToken[] = [];
+  let lineHeight: SingleToken[] = [];
   let fontWeight: SingleToken[] = [];
-  let fontSizes: SingleToken[] = [];
+  let fontSize: SingleToken[] = [];
   let letterSpacing: SingleToken[] = [];
   let paragraphSpacing: SingleToken[] = [];
   let paragraphIndent: any[] = [];
@@ -70,9 +70,9 @@ export default function pullStyles(styleTypes: PullStyleOptions): void {
   }
 
   if (styleTypes.textStyles) {
-    const rawFontSizes: number[] = [];
+    const rawfontSize: number[] = [];
     const fontCombinations: FontName[] = [];
-    const rawLineHeights: LineHeight[] = [];
+    const rawlineHeight: LineHeight[] = [];
     const rawParagraphSpacing: number[] = [];
     const rawParagraphIndent: number[] = [];
     const rawLetterSpacing: LetterSpacing[] = [];
@@ -82,9 +82,9 @@ export default function pullStyles(styleTypes: PullStyleOptions): void {
     const figmaTextStyles = figma.getLocalTextStyles();
 
     figmaTextStyles.forEach((style) => {
-      if (!rawFontSizes.includes(style.fontSize)) rawFontSizes.push(style.fontSize);
+      if (!rawfontSize.includes(style.fontSize)) rawfontSize.push(style.fontSize);
       fontCombinations.push(style.fontName);
-      rawLineHeights.push(style.lineHeight);
+      rawlineHeight.push(style.lineHeight);
       if (!rawParagraphSpacing.includes(style.paragraphSpacing)) rawParagraphSpacing.push(style.paragraphSpacing);
       if (!rawParagraphIndent.includes(style.paragraphIndent)) rawParagraphIndent.push(style.paragraphIndent);
       rawLetterSpacing.push(style.letterSpacing);
@@ -92,37 +92,37 @@ export default function pullStyles(styleTypes: PullStyleOptions): void {
       if (!rawTextDecoration.includes(style.textDecoration)) rawTextDecoration.push(style.textDecoration);
     });
 
-    fontSizes = rawFontSizes
+    fontSize = rawfontSize
       .sort((a, b) => a - b)
       .map((size, idx) => ({
         name: `fontSize.${idx}`,
         value: size.toString(),
-        type: TokenTypes.FONT_SIZES,
+        type: TokenTypes.FONT_SIZE,
       }));
 
     const uniqueFontCombinations = fontCombinations.filter(
       (v, i, a) => a.findIndex((t) => t.family === v.family && t.style === v.style) === i,
     );
-    lineHeights = rawLineHeights
+    lineHeight = rawlineHeight
       .filter(
         (v, i, a) => a.findIndex((t) => t.unit === v.unit && ('value' in t && 'value' in v ? t.value === v.value : true)) === i,
       )
       .map((lh, idx) => ({
-        name: `lineHeights.${idx}`,
+        name: `lineHeight.${idx}`,
         value: convertFigmaToLineHeight(lh).toString(),
-        type: TokenTypes.LINE_HEIGHTS,
+        type: TokenTypes.LINE_HEIGHT,
       }));
 
-    fontFamilies = [...new Set(uniqueFontCombinations.map((font) => font.family))].map((fontFamily) => ({
-      name: `fontFamilies.${slugify(fontFamily)}`,
+    fontFamily = [...new Set(uniqueFontCombinations.map((font) => font.family))].map((fontFamily) => ({
+      name: `fontFamily.${slugify(fontFamily)}`,
       value: fontFamily,
-      type: TokenTypes.FONT_FAMILIES,
+      type: TokenTypes.FONT_FAMILY,
     }));
 
     fontWeight = uniqueFontCombinations.map((font, idx) => ({
       name: `fontWeight.${slugify(font.family)}-${idx}`,
       value: font.style,
-      type: TokenTypes.FONT_WEIGHTS,
+      type: TokenTypes.FONT_WEIGHT,
     }));
     paragraphSpacing = rawParagraphSpacing
       .sort((a, b) => a - b)
@@ -161,14 +161,14 @@ export default function pullStyles(styleTypes: PullStyleOptions): void {
     }));
 
     typography = figmaTextStyles.map((style) => {
-      const foundFamily = fontFamilies.find((el: SingleToken) => el.value === style.fontName.family);
+      const foundFamily = fontFamily.find((el: SingleToken) => el.value === style.fontName.family);
       const foundFontWeight = fontWeight.find(
         (el: SingleToken) => el.name.includes(slugify(style.fontName.family)) && el.value === style.fontName?.style,
       );
-      const foundLineHeight = lineHeights.find(
+      const foundLineHeight = lineHeight.find(
         (el: SingleToken) => el.value === convertFigmaToLineHeight(style.lineHeight).toString(),
       );
-      const foundFontSize = fontSizes.find((el: SingleToken) => el.value === style.fontSize.toString());
+      const foundFontSize = fontSize.find((el: SingleToken) => el.value === style.fontSize.toString());
       const foundLetterSpacing = letterSpacing.find(
         (el: SingleToken) => el.value === convertFigmaToLetterSpacing(style.letterSpacing).toString(),
       );
@@ -257,10 +257,10 @@ export default function pullStyles(styleTypes: PullStyleOptions): void {
   const stylesObject = {
     colors,
     effects,
-    fontFamilies,
-    lineHeights,
+    fontFamily,
+    lineHeight,
     fontWeight,
-    fontSizes,
+    fontSize,
     letterSpacing,
     paragraphSpacing,
     typography,

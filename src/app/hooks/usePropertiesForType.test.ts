@@ -127,11 +127,11 @@ describe('usePropertiesForTokenType', () => {
       ],
     },
     {
-      type: 'fontFamilies',
+      type: 'fontFamily',
       properties: [
         {
-          name: 'fontFamilies',
-          label: 'fontFamilies',
+          name: 'fontFamily',
+          label: 'fontFamily',
         },
       ],
     },
@@ -145,20 +145,20 @@ describe('usePropertiesForTokenType', () => {
       ],
     },
     {
-      type: 'lineHeights',
+      type: 'lineHeight',
       properties: [
         {
-          name: 'lineHeights',
-          label: 'lineHeights',
+          name: 'lineHeight',
+          label: 'lineHeight',
         },
       ],
     },
     {
-      type: 'fontSizes',
+      type: 'fontSize',
       properties: [
         {
-          name: 'fontSizes',
-          label: 'fontSizes',
+          name: 'fontSize',
+          label: 'fontSize',
         },
       ],
     },

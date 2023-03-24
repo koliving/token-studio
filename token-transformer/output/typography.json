@@ -3,7 +3,7 @@
     "fontFamily": {
       "value": "Roboto",
       "description": "Font value",
-      "type": "fontFamilies"
+      "type": "fontFamily"
     },
     "fontWeight": {
       "value": "Bold",

@@ -325,10 +325,10 @@ export default async function setValuesOnNode(
         }
       }
       if (
-        values.fontFamilies
+        values.fontFamily
         || values.fontWeight
-        || values.lineHeights
-        || values.fontSizes
+        || values.lineHeight
+        || values.fontSize
         || values.letterSpacing
         || values.paragraphSpacing
         || values.textCase
@@ -337,10 +337,10 @@ export default async function setValuesOnNode(
         if (node.type === 'TEXT') {
           setTextValuesOnTarget(node, {
             value: {
-              fontFamily: isPrimitiveValue(values.fontFamilies) ? String(values.fontFamilies) : undefined,
+              fontFamily: isPrimitiveValue(values.fontFamily) ? String(values.fontFamily) : undefined,
               fontWeight: isPrimitiveValue(values.fontWeight) ? String(values.fontWeight) : undefined,
-              lineHeight: isPrimitiveValue(values.lineHeights) ? String(values.lineHeights) : undefined,
-              fontSize: isPrimitiveValue(values.fontSizes) ? String(values.fontSizes) : undefined,
+              lineHeight: isPrimitiveValue(values.lineHeight) ? String(values.lineHeight) : undefined,
+              fontSize: isPrimitiveValue(values.fontSize) ? String(values.fontSize) : undefined,
               letterSpacing: isPrimitiveValue(values.letterSpacing) ? String(values.letterSpacing) : undefined,
               paragraphSpacing: isPrimitiveValue(values.paragraphSpacing) ? String(values.paragraphSpacing) : undefined,
               textCase: isPrimitiveValue(values.textCase) ? String(values.textCase) : undefined,

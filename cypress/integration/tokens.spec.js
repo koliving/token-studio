@@ -491,7 +491,7 @@ describe('TokenListing', () => {
         }, {
           name: 'font-size.4',
           value: '4px',
-          type: 'fontSizes'
+          type: 'fontSize'
         }],
         global: [{
           name: 'sizing.xs',
@@ -525,7 +525,7 @@ describe('TokenListing', () => {
 
     cy.get('[data-cy=button-style-add-multiple]').click();
     cy.get('[data-cy=composition-token-dropdown]').eq(2).click();
-    cy.get('[data-cy=item-dropdown-menu-element-fontSizes]').click();
+    cy.get('[data-cy=item-dropdown-menu-element-fontSize]').click();
     fillInputNth({
       input: 'value',
       value: '$font-size.4',

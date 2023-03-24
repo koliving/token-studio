@@ -8,11 +8,11 @@ import {
   SingleOpacityToken,
   SingleBorderWidthToken,
   SingleBoxShadowToken,
-  SingleFontFamiliesToken,
+  SinglefontFamilyToken,
   SinglefontWeightToken,
-  SingleLineHeightsToken,
+  SinglelineHeightToken,
   SingleLetterSpacingToken,
-  SingleFontSizesToken,
+  SinglefontSizeToken,
   SingleParagraphSpacingToken,
   SingleTextDecorationToken,
   SingleTextCaseToken,
@@ -45,11 +45,11 @@ export type UpdateTokenPayload =
   | GenericTokenInput<TokenTypes.OPACITY, SingleOpacityToken['value']>
   | GenericTokenInput<TokenTypes.BORDER_WIDTH, SingleBorderWidthToken['value']>
   | GenericTokenInput<TokenTypes.BOX_SHADOW, SingleBoxShadowToken['value']>
-  | GenericTokenInput<TokenTypes.FONT_FAMILIES, SingleFontFamiliesToken['value']>
-  | GenericTokenInput<TokenTypes.FONT_WEIGHTS, SinglefontWeightToken['value']>
-  | GenericTokenInput<TokenTypes.LINE_HEIGHTS, SingleLineHeightsToken['value']>
+  | GenericTokenInput<TokenTypes.FONT_FAMILY, SinglefontFamilyToken['value']>
+  | GenericTokenInput<TokenTypes.FONT_WEIGHT, SinglefontWeightToken['value']>
+  | GenericTokenInput<TokenTypes.LINE_HEIGHT, SinglelineHeightToken['value']>
   | GenericTokenInput<TokenTypes.LETTER_SPACING, SingleLetterSpacingToken['value']>
-  | GenericTokenInput<TokenTypes.FONT_SIZES, SingleFontSizesToken['value']>
+  | GenericTokenInput<TokenTypes.FONT_SIZE, SinglefontSizeToken['value']>
   | GenericTokenInput<TokenTypes.PARAGRAPH_SPACING, SingleParagraphSpacingToken['value']>
   | GenericTokenInput<TokenTypes.TEXT_DECORATION, SingleTextDecorationToken['value']>
   | GenericTokenInput<TokenTypes.TEXT_CASE, SingleTextCaseToken['value']>

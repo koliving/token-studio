@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect';
 import { settingsStateSelector } from './settingsStateSelector';
 
-export const baseFontSizeSelector = createSelector(
+export const basefontSizeelector = createSelector(
   settingsStateSelector,
   (state) => state.baseFontSize,
 );

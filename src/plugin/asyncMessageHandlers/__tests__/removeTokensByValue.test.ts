@@ -34,8 +34,8 @@ describe('removeTokensByValue', () => {
       } as BaseNode,
       tokens: {
         fill: 'color.red.800',
-        fontFamilies: 'font-family.Inter',
-        fontSizes: 'font-size.6',
+        fontFamily: 'font-family.Inter',
+        fontSize: 'font-size.6',
       },
     } as NodeManagerNode));
     await removeTokensByValue({
@@ -53,8 +53,8 @@ describe('removeTokensByValue', () => {
         } as BaseNode,
         tokens: {
           fill: 'color.red.800',
-          fontFamilies: 'font-family.Inter',
-          fontSizes: 'font-size.6',
+          fontFamily: 'font-family.Inter',
+          fontSize: 'font-size.6',
         },
       }],
       values: {

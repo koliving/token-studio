@@ -6,11 +6,11 @@ import { SingleTypographyToken } from './SingleTypographyToken';
 import { SingleOpacityToken } from './SingleOpacityToken';
 import { SingleBorderWidthToken } from './SingleBorderWidthToken';
 import { SingleBoxShadowToken } from './SingleBoxShadowToken';
-import { SingleFontFamiliesToken } from './SingleFontFamiliesToken';
-import { SinglefontWeightToken } from './SinglefontWeightToken';
-import { SingleLineHeightsToken } from './SingleLineHeightsToken';
+import { SinglefontFamilyToken } from './SingleFontFamilyToken';
+import { SinglefontWeightToken } from './SingleFontWeightToken';
+import { SinglelineHeightToken } from './SingleLineHeightToken';
 import { SingleLetterSpacingToken } from './SingleLetterSpacingToken';
-import { SingleFontSizesToken } from './SingleFontSizesToken';
+import { SinglefontSizeToken } from './SingleFontSizeToken';
 import { SingleParagraphSpacingToken } from './SingleParagraphSpacingToken';
 import { SingleTextDecorationToken } from './SingleTextDecorationToken';
 import { SingleTextCaseToken } from './SingleTextCaseToken';
@@ -28,11 +28,11 @@ export type SingleToken<Named extends boolean = true, P = unknown> =
   | SingleOpacityToken<Named, P>
   | SingleBorderWidthToken<Named, P>
   | SingleBoxShadowToken<Named, P>
-  | SingleFontFamiliesToken<Named, P>
+  | SinglefontFamilyToken<Named, P>
   | SinglefontWeightToken<Named, P>
-  | SingleLineHeightsToken<Named, P>
+  | SinglelineHeightToken<Named, P>
   | SingleLetterSpacingToken<Named, P>
-  | SingleFontSizesToken<Named, P>
+  | SinglefontSizeToken<Named, P>
   | SingleParagraphSpacingToken<Named, P>
   | SingleTextDecorationToken<Named, P>
   | SingleTextCaseToken<Named, P>

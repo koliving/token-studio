@@ -74,7 +74,7 @@ export const TokenButtonDefaultStory = (args) => {
         name: 'typography.headlines.small',
         type: TokenTypes.TYPOGRAPHY,
         value: {
-          fontFamily: '{fontFamilies.default}',
+          fontFamily: '{fontFamily.default}',
           fontWeight: '{fontWeight.regular}',
           lineHeight: '{lineHeight.headings}',
           fontSize: '{fontSize.h5}',
@@ -94,10 +94,10 @@ export const TokenButtonDefaultStory = (args) => {
     args={{
       token: {
         name: 'font-family.default',
-        type: TokenTypes.FONT_FAMILIES,
-        value: '{fontFamilies.serif}',
+        type: TokenTypes.FONT_FAMILY,
+        value: '{fontFamily.serif}',
       },
-      type: TokenTypes.FONT_FAMILIES,
+      type: TokenTypes.FONT_FAMILY,
     }}
   >
     {TokenButtonDefaultStory.bind({})}
@@ -107,10 +107,10 @@ export const TokenButtonDefaultStory = (args) => {
     args={{
       token: {
         name: 'line-height.1',
-        type: TokenTypes.LINE_HEIGHTS,
+        type: TokenTypes.LINE_HEIGHT,
         value: '130%',
       },
-      type: TokenTypes.LINE_HEIGHTS,
+      type: TokenTypes.LINE_HEIGHT,
     }}
   >
     {TokenButtonDefaultStory.bind({})}
@@ -140,10 +140,10 @@ export const TokenButtonDefaultStory = (args) => {
     args={{
       token: {
         name: 'font-weight.regular',
-        type: TokenTypes.FONT_WEIGHTS,
+        type: TokenTypes.FONT_WEIGHT,
         value: 'Regular',
       },
-      type: TokenTypes.FONT_WEIGHTS,
+      type: TokenTypes.FONT_WEIGHT,
     }}
   >
     {TokenButtonDefaultStory.bind({})}

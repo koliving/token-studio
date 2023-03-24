@@ -11,7 +11,7 @@
     "fontFamily": {
       "value": "Roboto",
       "description": "Font value",
-      "type": "fontFamilies"
+      "type": "fontFamily"
     },
     "fontWeight": {
       "value": "Bold",
@@ -21,11 +21,11 @@
     "header": {
       "fontFamily": {
         "value": "Roboto",
-        "type": "fontFamilies"
+        "type": "fontFamily"
       },
       "fontSize": {
         "value": 96,
-        "type": "fontSizes"
+        "type": "fontSize"
       },
       "fontWeight": {
         "value": "Bold",

@@ -92,20 +92,20 @@ describe('convertToDefaultProperty', () => {
       output: Properties.opacity,
     },
     {
-      input: Properties.fontFamilies,
-      output: Properties.fontFamilies,
+      input: Properties.fontFamily,
+      output: Properties.fontFamily,
     },
     {
       input: Properties.fontWeight,
       output: Properties.fontWeight,
     },
     {
-      input: Properties.fontSizes,
-      output: Properties.fontSizes,
+      input: Properties.fontSize,
+      output: Properties.fontSize,
     },
     {
-      input: Properties.lineHeights,
-      output: Properties.lineHeights,
+      input: Properties.lineHeight,
+      output: Properties.lineHeight,
     },
     {
       input: Properties.typography,

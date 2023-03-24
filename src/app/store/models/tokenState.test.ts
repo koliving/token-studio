@@ -85,7 +85,7 @@ describe('editToken', () => {
                 },
                 {
                   name: 'font.medium',
-                  type: 'fontSizes',
+                  type: 'fontSize',
                   value: '18px',
                 },
                 {
@@ -399,7 +399,7 @@ describe('editToken', () => {
       },
       {
         name: 'font.medium',
-        type: 'fontSizes',
+        type: 'fontSize',
         value: '18px',
       },
       {
@@ -498,7 +498,7 @@ describe('editToken', () => {
       },
       {
         name: 'font.medium',
-        type: 'fontSizes',
+        type: 'fontSize',
         value: '18px',
       },
       {
@@ -582,7 +582,7 @@ describe('editToken', () => {
       },
       {
         name: 'font.medium',
-        type: 'fontSizes',
+        type: 'fontSize',
         value: '18px',
       },
       {
@@ -739,7 +739,7 @@ describe('editToken', () => {
       },
       {
         name: 'font.medium',
-        type: 'fontSizes',
+        type: 'fontSize',
         value: '18px',
       },
       {
@@ -815,7 +815,7 @@ describe('editToken', () => {
       },
       {
         name: 'font.medium',
-        type: 'fontSizes',
+        type: 'fontSize',
         value: '18px',
       },
       {
@@ -878,7 +878,7 @@ describe('editToken', () => {
       },
       {
         name: 'font.medium',
-        type: 'fontSizes',
+        type: 'fontSize',
         value: '18px',
       },
       {
@@ -949,7 +949,7 @@ describe('editToken', () => {
       },
       {
         name: 'font.medium',
-        type: 'fontSizes',
+        type: 'fontSize',
         value: '18px',
       },
       {
@@ -1020,7 +1020,7 @@ describe('editToken', () => {
       },
       {
         name: 'font.medium',
-        type: 'fontSizes',
+        type: 'fontSize',
         value: '18px',
       },
       {
