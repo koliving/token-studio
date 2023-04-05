@@ -1,17 +1,15 @@
 import { Properties } from '@/constants/Properties';
 import { CounterAxisAlignItems } from '../figmaTypes/counterAxisAlignItems';
-import { LayoutMode } from '../figmaTypes/layoutMode';
 import { PrimaryAxisAlignItems } from '../figmaTypes/primaryAxisAlignItems';
-import { getNodeParentLayoutMode } from '../figmaUtils/getNodeParentLayoutMode';
 import { notifyUI } from '../notifiers';
 import { BaseToken } from './BaseToken';
 
-export type LayoutAlignItemsValue = 'TOP_LEFT' | 'TOP_CENTER' | 'TOP_RIGHT' | 'LEFT' | 'CENTER' | 'RIGHT' | 'BOTTOM_LEFT' | 'BOTTOM_CENTER' | 'BOTTOM_RIGHT';
+export type LayoutAlignItemsValue = 'TOP_LEFT' | 'TOP_CENTER' | 'TOP_RIGHT' | 'CENTER_LEFT' | 'CENTER' | 'CENTER_RIGHT' | 'BOTTOM_LEFT' | 'BOTTOM_CENTER' | 'BOTTOM_RIGHT';
 
 export class LayoutAlignItemsToken extends BaseToken<LayoutAlignItemsValue> {
   public readonly key = Properties.layoutAlignItems;
 
-  private readonly allowedValues = ['TOP_LEFT', 'TOP_CENTER', 'TOP_RIGHT', 'LEFT', 'CENTER', 'RIGHT', 'BOTTOM_LEFT', 'BOTTOM_CENTER', 'BOTTOM_RIGHT'];
+  private readonly allowedValues = ['TOP_LEFT', 'TOP_CENTER', 'TOP_RIGHT', 'CENTER_LEFT', 'CENTER', 'CENTER_RIGHT', 'BOTTOM_LEFT', 'BOTTOM_CENTER', 'BOTTOM_RIGHT'];
 
   private readonly defaultValue = 'TOP_LEFT';
 
@@ -41,7 +39,7 @@ export class LayoutAlignItemsToken extends BaseToken<LayoutAlignItemsValue> {
         primaryAxisAlignItems = 'MAX';
         counterAxisAlignItems = 'MIN';
         break;
-      case 'LEFT':
+      case 'CENTER_LEFT':
         primaryAxisAlignItems = 'MIN';
         counterAxisAlignItems = 'CENTER';
         break;
@@ -49,7 +47,7 @@ export class LayoutAlignItemsToken extends BaseToken<LayoutAlignItemsValue> {
         primaryAxisAlignItems = 'CENTER';
         counterAxisAlignItems = 'CENTER';
         break;
-      case 'RIGHT':
+      case 'CENTER_RIGHT':
         primaryAxisAlignItems = 'MAX';
         counterAxisAlignItems = 'CENTER';
         break;
@@ -69,7 +67,7 @@ export class LayoutAlignItemsToken extends BaseToken<LayoutAlignItemsValue> {
         throw new Error(`Invalid layout align value: ${value}`);
     }
 
-    if ('layoutMode' in node && node.layoutMode == 'VERTICAL') {
+    if ('layoutMode' in node && node.layoutMode === 'VERTICAL') {
       [primaryAxisAlignItems, counterAxisAlignItems] = [counterAxisAlignItems, primaryAxisAlignItems];
     }
 
