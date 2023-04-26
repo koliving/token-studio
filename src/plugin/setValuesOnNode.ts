@@ -34,6 +34,7 @@ import layoutAlignItemsToken from './tokens/LayoutAlignItemsToken';
 import maxWidthToken from './tokens/MaxWidthToken';
 import transformXToken from './tokens/TransformXToken';
 import transformYToken from './tokens/TransformYToken';
+import spacingModeToken from './tokens/SpacingModeToken';
 
 // @README values typing is wrong
 
@@ -54,15 +55,6 @@ export default async function setValuesOnNode(
   const stylePathPrefix = prefixStylesWithThemeName && activeThemeObject ? activeThemeObject.name : null;
 
   try {
-    layoutModeToken.applyFromTokensResult(node, values);
-    horizontalResizingToken.applyFromTokensResult(node, values);
-    verticalResizingToken.applyFromTokensResult(node, values);
-    layoutPositioningToken.applyFromTokensResult(node, values);
-    layoutAlignItemsToken.applyFromTokensResult(node, values);
-    maxWidthToken.applyFromTokensResult(node, values);
-    transformXToken.applyFromTokensResult(node, values);
-    transformYToken.applyFromTokensResult(node, values);
-
     // BORDER RADIUS
     if (
       node.type !== 'CONNECTOR'
@@ -502,4 +494,15 @@ export default async function setValuesOnNode(
   } catch (e) {
     console.log('Error setting data on node', e);
   }
+
+  // jan6 goddamn it
+  layoutModeToken.applyFromTokensResult(node, values);
+  horizontalResizingToken.applyFromTokensResult(node, values);
+  verticalResizingToken.applyFromTokensResult(node, values);
+  layoutPositioningToken.applyFromTokensResult(node, values);
+  layoutAlignItemsToken.applyFromTokensResult(node, values);
+  spacingModeToken.applyFromTokensResult(node, values);
+  maxWidthToken.applyFromTokensResult(node, values);
+  transformXToken.applyFromTokensResult(node, values);
+  transformYToken.applyFromTokensResult(node, values);
 }

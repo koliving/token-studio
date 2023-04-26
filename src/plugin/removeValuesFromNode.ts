@@ -7,10 +7,13 @@ import maxWidthToken from './tokens/MaxWidthToken';
 import transformXToken from './tokens/TransformXToken';
 import transformYToken from './tokens/TransformYToken';
 import verticalResizingToken from './tokens/VerticalResizingToken';
+import spacingModeToken from './tokens/SpacingModeToken';
 
 export default function removeValuesFromNode(node: BaseNode, prop: Properties) {
   // BORDER RADIUS
   switch (prop) {
+    case spacingModeToken.key:
+      spacingModeToken.unset(node);
     case layoutModeToken.key:
       layoutModeToken.unset(node);
       break;

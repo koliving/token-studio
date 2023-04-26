@@ -1,5 +1,6 @@
 export enum Properties {
   layoutMode = 'layoutMode',
+  spacingMode = 'spacingMode',
   horizontalResizing = 'horizontalResizing',
   verticalResizing = 'verticalResizing',
   layoutPositioning = 'layoutPositioning',

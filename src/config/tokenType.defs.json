@@ -155,6 +155,15 @@
       "value": { "type": "string" }
     }
   },
+  "spacingMode": {
+    "label": "Spacing Mode",
+    "property": "Spacing Mode",
+    "type": "spacingMode",
+    "suggestions": ["packed", "space between"],
+    "schemas": {
+      "value": { "type": "string" }
+    }
+  },
   "layoutMode": {
     "label": "Layout Mode",
     "property": "Layout Mode",

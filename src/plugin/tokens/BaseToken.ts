@@ -9,7 +9,9 @@ export abstract class BaseToken<TValue> {
 
   public applyFromTokensResult(node: BaseNode, values: MapValuesToTokensResult) {
     if (values[this.key]) {
-      this.apply(node, this.fromTokenValue(values[this.key]));
+      const val = this.fromTokenValue(values[this.key]);
+      console.log('[token-studio] applying', val, 'on', this.key, 'to', node)
+      this.apply(node, val);
     }
   }
 }
